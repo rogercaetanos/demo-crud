@@ -1,5 +1,6 @@
 package br.edu.itb.exemplo.democrud.model.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -22,6 +23,8 @@ public class Produto {
 	private String descricao;
 	private String codigoBarras;
 	//private String foto;
+
+	@Column(columnDefinition = "VARBINARY(max)")
 	private byte[] foto;
 	private double preco;
 	
